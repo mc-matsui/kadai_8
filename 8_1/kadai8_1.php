@@ -1,6 +1,5 @@
 <?php
 
-$cnt = array(); //配列初期化
 $total=0;
 $count = 10; //10件まで表示用の変数
 $file   = file('lesson.bbs');
@@ -11,8 +10,7 @@ while ($lines = fgets($fps))
 	//BBS最後の行『contend>>』を取得して1件カウント
 	if (preg_match("/contend>>/",$lines))
 	{
-		$cnt[] = $lines;
-		$total = count($cnt); //件数取得
+		$total++;
 	}
 }
 
